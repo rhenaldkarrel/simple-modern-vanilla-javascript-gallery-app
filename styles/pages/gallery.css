@@ -7,3 +7,24 @@
 .categories .navbar-nav .nav-link.active {
 	border-bottom: 2px solid black !important;
 }
+
+/* Search */
+section.search .search-wrapper {
+	background-image: url('https://images.pexels.com/photos/1668928/pexels-photo-1668928.jpeg?auto=compress&cs=tinysrgb&w=1600');
+	position: relative;
+	min-height: 25rem;
+	display: flex;
+	align-items: center;
+}
+
+section.search .search-wrapper::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-color: black;
+	opacity: 0.25;
+}
