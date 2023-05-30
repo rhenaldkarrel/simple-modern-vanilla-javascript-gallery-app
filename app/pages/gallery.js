@@ -1,5 +1,4 @@
-import { loadNav } from '../ui/navbar.js';
-import { loadPhotos } from '../ui/photos.js';
+import { loadNav, loadPhotos } from '../ui/index.js';
 import { DOM } from '../utils/index.js';
 import { gallery } from '../constants/images-data.js';
 

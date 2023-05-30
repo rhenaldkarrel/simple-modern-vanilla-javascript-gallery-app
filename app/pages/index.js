@@ -1,5 +1,4 @@
-import { loadNav } from '../ui/navbar.js';
-import { loadPhotos } from '../ui/photos.js';
+import { loadNav, loadPhotos } from '../ui/index.js';
 import { CATEGORIES, gallery } from '../constants/images-data.js';
 
 const blogImages = gallery.filter((p) => p.category.includes(CATEGORIES.blog));
