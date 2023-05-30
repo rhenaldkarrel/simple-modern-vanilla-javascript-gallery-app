@@ -1,7 +1,7 @@
-import { DOM } from '../utils/index.js';
+import { DOMUtils } from '../utils/index.js';
 
 export function loadPhotos(wrapper, images) {
-	const photosContainer = DOM.find(wrapper);
+	const photosContainer = DOMUtils.find(wrapper);
 
 	const photosElement = images
 		.map(

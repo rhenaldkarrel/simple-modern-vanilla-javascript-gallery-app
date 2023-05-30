@@ -1,5 +1,5 @@
 import { loadTemplate, loadPhotos } from '../ui/index.js';
-import { DOM } from '../utils/index.js';
+import { DOMUtils } from '../utils/index.js';
 import { gallery } from '../constants/images-data.js';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	loadTemplate();
 	loadPhotos(photosContainerClass, gallery);
 
-	const searchForm = DOM.find('.search-form');
+	const searchForm = DOMUtils.find('.search-form');
 
 	searchForm.addEventListener('submit', function (e) {
 		e.preventDefault();
 
-		const query = DOM.find('#search-input').value.toLowerCase();
+		const query = DOMUtils.find('#search-input').value.toLowerCase();
 
 		if (query === '') {
 			return loadPhotos(photosContainerClass, gallery);
@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		loadPhotos(photosContainerClass, result);
 	});
 
-	const categoryLinks = DOM.findAll('.categories .nav-link');
+	const categoryLinks = DOMUtils.findAll('.categories .nav-link');
 
 	for (let categoryLink of categoryLinks) {
 		categoryLink.addEventListener('click', function (e) {
-			const previousActiveLink = DOM.find('.categories .nav-link.active');
+			const previousActiveLink = DOMUtils.find('.categories .nav-link.active');
 
 			if (previousActiveLink) {
 				previousActiveLink.classList.remove('active');

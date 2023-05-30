@@ -1,8 +1,8 @@
 import { navLinks } from '../constants/nav-link.js';
-import { DOM, URLUtils } from '../utils/index.js';
+import { DOMUtils, URLUtils } from '../utils/index.js';
 
 export function loadNav() {
-	const navbarNav = DOM.find('.navbar-nav');
+	const navbarNav = DOMUtils.find('.navbar-nav');
 	const isActive = (path) => (URLUtils.isActivePage(path) ? 'active' : '');
 
 	const navLink = navLinks

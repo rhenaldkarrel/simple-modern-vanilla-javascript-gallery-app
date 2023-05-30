@@ -1,4 +1,4 @@
-export class DOM {
+export class DOMUtils {
 	static find(el) {
 		return document.querySelector(el);
 	}
