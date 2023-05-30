@@ -1,4 +1,4 @@
-import { loadNav, loadPhotos } from '../ui/index.js';
+import { loadTemplate, loadPhotos } from '../ui/index.js';
 import { CATEGORIES, gallery } from '../constants/images-data.js';
 
 const blogImages = gallery.filter((p) => p.category.includes(CATEGORIES.blog));
@@ -10,7 +10,8 @@ const editorialImages = gallery.filter((p) =>
 );
 
 document.addEventListener('DOMContentLoaded', function () {
-	loadNav();
+	loadTemplate();
+
 	loadPhotos('.photos .photos-blog', blogImages);
 	loadPhotos('.photos .photos-music', musicImages);
 	loadPhotos('.photos .photos-editorial', editorialImages);
