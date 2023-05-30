@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			return loadPhotos(photosContainerClass, gallery);
 		}
 
-		const result = gallery.filter((p) => p.category.includes(query));
+		const result = gallery.filter(
+			(p) => p.category.includes(query) || p.title.toLowerCase().includes(query)
+		);
 
 		loadPhotos(photosContainerClass, result);
 	});
