@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	for (let categoryLink of categoryLinks) {
 		categoryLink.addEventListener('click', function (e) {
+			const previousActiveLink = DOM.find('.categories .nav-link.active');
+
+			if (previousActiveLink) {
+				previousActiveLink.classList.remove('active');
+			}
+
+			e.target.classList.add('active');
+
 			const categoryName = e.target.text.toLowerCase();
 
 			const result = gallery.filter((p) => p.category.includes(categoryName));
