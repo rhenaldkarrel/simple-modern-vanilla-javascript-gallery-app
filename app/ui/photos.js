@@ -1,10 +1,9 @@
-import { gallery } from '../constants/images-data.js';
 import { DOM } from '../utils/index.js';
 
-export function loadPhotos() {
-	const photosContainer = DOM.find('.photos .row');
+export function loadPhotos(wrapper, images) {
+	const photosContainer = DOM.find(wrapper);
 
-	const photosElement = gallery
+	const photosElement = images
 		.map(
 			(p) =>
 				`
