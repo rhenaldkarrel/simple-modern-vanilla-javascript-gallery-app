@@ -11,9 +11,11 @@
     integrity='sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A=='
     crossorigin='anonymous' />
   <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/pages/index.css">
 </head>
 
 <body class="bg-light">
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -25,6 +27,49 @@
       </div>
     </div>
   </nav>
+  <!-- End Navbar -->
+
+  <!-- Carousel -->
+  <div class="container">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="p-5 bg-dark rounded-3 carousel-image carousel-image-one my-4">
+            <div class="container-fluid py-5 text-center">
+              <h1 class="display-5 fw-bold text-white">Rhenald's Gallery</h1>
+              <p class="fs-4 text-white-50">Capture the Moments, Freeze the Memories</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="p-5 bg-dark rounded-3 carousel-image carousel-image-two my-4">
+            <div class="container-fluid py-5 text-center">
+              <h1 class="display-5 fw-bold text-white">Rhenald's Gallery</h1>
+              <p class="fs-4 text-white-50">Immerse in Timeless Moments</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="p-5 bg-dark rounded-3 carousel-image carousel-image-three my-4">
+            <div class="container-fluid py-5 text-center">
+              <h1 class="display-5 fw-bold text-white">Rhenald's Gallery</h1>
+              <p class="fs-4 text-white-50">Frames That Echo Forever</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- End Carousel -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
