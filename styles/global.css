@@ -4,8 +4,8 @@ body {
 	--bs-body-font-family: 'Lato', sans-serif;
 }
 
-body > *:not(:last-child) {
-	margin-bottom: 1.5rem;
+body > *:where(:not(:first-child)) {
+	margin-top: 1.5rem;
 }
 
 /* Photos */
