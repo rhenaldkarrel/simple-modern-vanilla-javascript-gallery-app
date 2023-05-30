@@ -69,12 +69,12 @@ export const gallery = [
 	},
 	{
 		src: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-		title: 'Timeless beauties in frames',
+		title: 'Ethereal landscapes embracing serenity',
 		category: [CATEGORIES.blog, CATEGORIES.editorial],
 	},
 	{
 		src: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=872&q=80',
-		title: 'Timeless beauties in frames',
+		title: 'Whispers of light in the urban maze',
 		category: [CATEGORIES.blog, CATEGORIES.editorial],
 	},
 ];
