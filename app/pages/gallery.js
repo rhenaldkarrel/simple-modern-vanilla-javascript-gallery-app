@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	searchForm.addEventListener('submit', function (e) {
 		e.preventDefault();
 
-		const query = DOM.find('#search-input').value;
+		const query = DOM.find('#search-input').value.toLowerCase();
 
 		if (query === '') {
 			return loadPhotos(photosContainerClass, gallery);
@@ -23,4 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		loadPhotos(photosContainerClass, result);
 	});
+
+	const categoryLinks = DOM.findAll('.categories .nav-link');
+
+	for (let categoryLink of categoryLinks) {
+		categoryLink.addEventListener('click', function (e) {
+			const categoryName = e.target.text.toLowerCase();
+
+			const result = gallery.filter((p) => p.category.includes(categoryName));
+
+			loadPhotos(photosContainerClass, result);
+		});
+	}
 });
