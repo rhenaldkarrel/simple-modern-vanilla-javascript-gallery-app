@@ -1,7 +1,7 @@
 /* Categories Menu */
 .categories .navbar-nav .nav-link {
 	text-transform: uppercase;
-	margin-inline: 3rem;
+	padding-inline: 3rem;
 }
 
 .categories .navbar-nav .nav-link.active {
