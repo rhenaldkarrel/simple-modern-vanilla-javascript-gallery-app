@@ -4,6 +4,10 @@
 	padding-inline: 3rem;
 }
 
+.categories .navbar-nav .nav-link:hover {
+	background-color: var(--bs-gray-200);
+}
+
 .categories .navbar-nav .nav-link.active {
 	border-bottom: 2px solid black !important;
 }
