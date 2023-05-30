@@ -53,7 +53,7 @@ export const gallery = [
 		category: [CATEGORIES.creative],
 	},
 	{
-		src: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=859&q=80',
+		src: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80',
 		title: 'Chronicles of the vibrant streets',
 		category: [CATEGORIES.video],
 	},
@@ -76,5 +76,26 @@ export const gallery = [
 		src: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=872&q=80',
 		title: 'Whispers of light in the urban maze',
 		category: [CATEGORIES.blog, CATEGORIES.editorial],
+	},
+	{
+		src: 'https://images.pexels.com/photos/733767/pexels-photo-733767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		title: 'Silhouette of a Man Playing Saxophone during Sunset',
+		category: [CATEGORIES.music],
+	},
+	{
+		src: 'https://images.pexels.com/photos/2441175/pexels-photo-2441175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		title: 'Man Playing Guitar While Sitting on Open Door',
+		category: [CATEGORIES.music],
+	},
+	{
+		src: 'https://images.pexels.com/photos/2510428/pexels-photo-2510428.jpeg?auto=compress&cs=tinysrgb&w=1600',
+		title: 'Unknown Person Playing Guitar',
+		category: [CATEGORIES.music, CATEGORIES.video],
+	},
+	{
+		src: 'https://images.pexels.com/photos/6953993/pexels-photo-6953993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		title:
+			'Young diverse ladies recording vlog about makeup products on smartphone',
+		category: [CATEGORIES.creative, CATEGORIES.video],
 	},
 ];
