@@ -7,3 +7,47 @@ body {
 body > *:not(:last-child) {
 	margin-bottom: 1.5rem;
 }
+
+/* Photos */
+.photos img {
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	object-fit: cover;
+}
+
+.photos .image-col {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.photos .image-description {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	color: white;
+	padding-inline: 1rem;
+	z-index: 99;
+	opacity: 0;
+	transition: all 150ms ease-in-out;
+	background-image: linear-gradient(360deg, #000000, #ffffff00);
+}
+
+.photos .image-col:hover .image-description {
+	opacity: 1;
+}
+
+.photos .image-col:hover::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-color: black;
+	opacity: 0.25;
+}
