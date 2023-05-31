@@ -2,7 +2,7 @@
 .carousel .carousel-image {
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 500px;
+	min-height: 31.25rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,4 +19,10 @@
 
 .carousel .carousel-image-three {
 	background-image: url('https://images.unsplash.com/photo-1504253492562-cbc4dc540fcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+}
+
+@media (max-width: 513px) {
+	.carousel .carousel-image {
+		min-height: 25rem;
+	}
 }
