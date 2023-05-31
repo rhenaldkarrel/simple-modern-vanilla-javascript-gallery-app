@@ -1,3 +1,11 @@
 .offcanvas-backdrop {
 	margin: 0;
 }
+
+.badge {
+	transition: all 150ms ease-in-out;
+}
+
+.badge:hover {
+	opacity: 0.75;
+}
