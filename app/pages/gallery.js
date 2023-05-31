@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	for (let categoryLink of categoryLinks) {
 		categoryLink.addEventListener('click', function (e) {
+			e.preventDefault();
+
 			const previousActiveLink = DOMUtils.find('.categories .nav-link.active');
 
 			if (previousActiveLink) {
