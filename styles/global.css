@@ -21,6 +21,7 @@ body > *:where(:not(:first-child)) {
 	display: block;
 	border-radius: 0.5rem;
 	overflow: hidden;
+	transition: all 150ms ease-in-out;
 }
 
 .photos .image-description {
@@ -50,4 +51,11 @@ body > *:where(:not(:first-child)) {
 	z-index: 1;
 	background-color: black;
 	opacity: 0.25;
+}
+
+@media (min-width: 513px) {
+	.photos .image-col:hover {
+		transform: scale(1.5);
+		z-index: 99;
+	}
 }
