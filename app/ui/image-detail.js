@@ -8,6 +8,9 @@ export function loadImageDetail(offcanvas, imageId) {
 
 	const imageDetailElement = `
     <img src="${imageDetail.src}" class="w-100 mb-3" alt="${imageDetail.title}">
+    <p>
+      ${imageDetail.description}
+    </p>
     <p class="d-flex gap-2">
       ${imageDetail.category
 				.map((c) => `<span class="badge bg-secondary">${c}</span>`)
