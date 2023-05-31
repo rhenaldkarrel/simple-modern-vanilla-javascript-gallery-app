@@ -13,7 +13,10 @@ export function loadImageDetail(offcanvas, imageId) {
     </p>
     <p class="d-flex gap-2">
       ${imageDetail.category
-				.map((c) => `<span class="badge bg-secondary">${c}</span>`)
+				.map(
+					(c) =>
+						`<a href="./gallery.html?category=${c}" class="badge bg-secondary text-decoration-none">${c}</a>`
+				)
 				.join('')}
     </p>
   `;

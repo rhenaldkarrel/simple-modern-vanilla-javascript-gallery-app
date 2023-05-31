@@ -56,4 +56,20 @@ document.addEventListener('DOMContentLoaded', function () {
 			loadImageDetail(offcanvasImageDetailElement, e.target.id);
 		});
 	}
+
+	const urlParams = new URLSearchParams(location.search);
+	const categoryParam = urlParams.get('category');
+
+	if (categoryParam) {
+		const navLinks = DOMUtils.findAll('.categories .nav-link');
+		const matchedNavLink = Array.from(navLinks).find((el) =>
+			el.text.toLowerCase().includes(categoryParam)
+		);
+
+		matchedNavLink.classList.add('active');
+
+		const result = gallery.filter((p) => p.category.includes(categoryParam));
+
+		loadPhotos(photosContainerClass, result);
+	}
 });
