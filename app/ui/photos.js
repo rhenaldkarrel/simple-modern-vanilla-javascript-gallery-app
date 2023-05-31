@@ -8,7 +8,7 @@ export function loadPhotos(wrapper, images) {
 			(p) =>
 				`
         <div class="col-6 col-md-4 col-xl-3">
-          <a href="${p.src}" target="_blank" class="image-col" title="${p.title}">
+          <a href="#offcanvas-image-detail" data-bs-toggle="offcanvas" class="image-col" title="${p.title}" id="${p.id}">
             <img
               src="${p.src}"
               alt="${p.title}"

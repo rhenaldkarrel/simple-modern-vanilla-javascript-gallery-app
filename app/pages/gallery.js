@@ -1,4 +1,4 @@
-import { loadTemplate, loadPhotos } from '../ui/index.js';
+import { loadTemplate, loadPhotos, loadImageDetail } from '../ui/index.js';
 import { DOMUtils } from '../utils/index.js';
 import { gallery } from '../constants/images-data.js';
 
@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			const result = gallery.filter((p) => p.category.includes(categoryName));
 
 			loadPhotos(photosContainerClass, result);
+		});
+	}
+
+	const offcanvasImageDetailElement = DOMUtils.find('.offcanvas');
+	const photos = DOMUtils.findAll('a.image-col');
+
+	for (let photo of photos) {
+		photo.addEventListener('click', function (e) {
+			loadImageDetail(offcanvasImageDetailElement, e.target.id);
 		});
 	}
 });
