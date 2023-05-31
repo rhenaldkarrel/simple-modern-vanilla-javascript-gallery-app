@@ -8,13 +8,13 @@ export function loadPhotos(wrapper, images) {
 			(p) =>
 				`
         <div class="col-6 col-md-4 col-xl-3">
-          <a href="${p.src}" target="_blank" class="image-col">
+          <a href="${p.src}" target="_blank" class="image-col" title="${p.title}">
             <img
               src="${p.src}"
               alt="${p.title}"
             />
             <div class="image-description">
-              <p>${p.title}</p>
+              <p class="text-truncate">${p.title}</p>
             </div>
           </a>
         </div>
