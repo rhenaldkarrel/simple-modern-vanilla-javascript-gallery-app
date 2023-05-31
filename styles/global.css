@@ -59,7 +59,7 @@ body > *:where(:not(:first-child)) {
 
 @media (min-width: 513px) {
 	.photos .image-col:hover {
-		transform: scale(1.5);
+		transform: scale(1.2);
 		z-index: 99;
 	}
 }
