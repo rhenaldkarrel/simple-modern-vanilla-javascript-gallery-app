@@ -41,6 +41,10 @@ body > *:where(:not(:first-child)) {
 	opacity: 1;
 }
 
+.photos .image-col:hover {
+	cursor: url(../static/images/new-tab.png) 10 10, pointer;
+}
+
 .photos .image-col:hover::after {
 	content: '';
 	position: absolute;
