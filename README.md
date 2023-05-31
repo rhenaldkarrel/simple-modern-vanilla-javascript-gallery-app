@@ -21,7 +21,7 @@ A simple image gallery web application for the Mini Project 1 of Front-End class
 
 ## How to install
 
-1. Clone the repository
-2. Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension on Visual Studio Code
+1. Clone the repository and open it in Visual Studio Code
+2. Install [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
 3. Right click on `/pages/index.html` and choose `Open with Live Server`
 4. Rock on 🚀
