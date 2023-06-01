@@ -1,4 +1,5 @@
 import { DOMUtils } from '../utils/index.js';
+import { loadImageDetail } from './image-detail.js';
 
 export function loadPhotos(wrapper, images) {
 	const photosContainer = DOMUtils.find(wrapper);
@@ -23,4 +24,12 @@ export function loadPhotos(wrapper, images) {
 		.join('');
 
 	photosContainer.innerHTML = photosElement;
+
+	const photos = DOMUtils.findAll('a.image-col');
+
+	for (let photo of photos) {
+		photo.addEventListener('click', function (e) {
+			loadImageDetail(e.target.id);
+		});
+	}
 }

@@ -1,4 +1,4 @@
-import { loadTemplate, loadPhotos, loadImageDetail } from '../ui/index.js';
+import { loadTemplate, loadPhotos } from '../ui/index.js';
 import { DOMUtils, URLUtils } from '../utils/index.js';
 import { gallery } from '../constants/images-data.js';
 
@@ -22,14 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		loadPhotos(photosContainerClass, result);
 	} else {
 		loadPhotos(photosContainerClass, gallery);
-	}
-
-	const photos = DOMUtils.findAll('a.image-col');
-
-	for (let photo of photos) {
-		photo.addEventListener('click', function (e) {
-			loadImageDetail(e.target.id);
-		});
 	}
 
 	const searchForm = DOMUtils.find('.search-form');
@@ -77,28 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				loadPhotos(photosContainerClass, gallery);
 
-				const photos = DOMUtils.findAll('a.image-col');
-
-				for (let photo of photos) {
-					photo.addEventListener('click', function (e) {
-						loadImageDetail(e.target.id);
-					});
-				}
-
 				return;
 			}
 
 			const result = gallery.filter((p) => p.category.includes(categoryName));
 
 			loadPhotos(photosContainerClass, result);
-
-			const photos = DOMUtils.findAll('a.image-col');
-
-			for (let photo of photos) {
-				photo.addEventListener('click', function (e) {
-					loadImageDetail(e.target.id);
-				});
-			}
 		});
 	}
 });
