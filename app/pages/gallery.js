@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		const result = gallery.filter(
-			(p) => p.category.includes(query) || p.title.toLowerCase().includes(query)
+			(p) =>
+				p.category.some((c) => c.includes(query)) ||
+				p.title.toLowerCase().includes(query)
 		);
 
 		loadPhotos(photosContainerClass, result);
