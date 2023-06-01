@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	const categoryLinks = DOMUtils.findAll('.categories .nav-link');
+	let previousClickedLink;
 
 	for (let categoryLink of categoryLinks) {
 		categoryLink.addEventListener('click', function (e) {
@@ -63,12 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
 			const previousActiveLink = DOMUtils.find('.categories .nav-link.active');
 
 			if (previousActiveLink) {
+				previousClickedLink = previousActiveLink.textContent.toLowerCase();
 				previousActiveLink.classList.remove('active');
 			}
 
 			e.target.classList.add('active');
 
 			const categoryName = e.target.text.toLowerCase();
+
+			if (previousClickedLink === categoryName) {
+				e.target.classList.remove('active');
+
+				loadPhotos(photosContainerClass, gallery);
+
+				const photos = DOMUtils.findAll('a.image-col');
+
+				for (let photo of photos) {
+					photo.addEventListener('click', function (e) {
+						loadImageDetail(e.target.id);
+					});
+				}
+
+				return;
+			}
 
 			const result = gallery.filter((p) => p.category.includes(categoryName));
 
