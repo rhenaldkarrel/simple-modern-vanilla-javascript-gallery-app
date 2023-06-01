@@ -25,7 +25,7 @@ export function loadPhotos(wrapper, images) {
 
 	photosContainer.innerHTML = photosElement;
 
-	const photos = DOMUtils.findAll('a.image-col');
+	const photos = photosContainer.querySelectorAll('a.image-col');
 
 	for (let photo of photos) {
 		photo.addEventListener('click', function (e) {
