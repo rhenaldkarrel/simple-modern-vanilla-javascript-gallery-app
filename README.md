@@ -12,9 +12,11 @@ A simple image gallery web application for the Mini Project 1 of Front-End class
 ## Key points
 
 - Utilized JavaScript DOM utilities
+- Utilize JavaScript URL utilities
 - Simple templating
 - Simple search by title and category
 - Simple category tabs filterization
+- Simple category badge/tag filterization
 - Responsive design with Bootstrap
 - Utilized Bootstrap carousel
 - Structured folder
