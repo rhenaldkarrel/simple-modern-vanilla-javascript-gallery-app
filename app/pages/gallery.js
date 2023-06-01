@@ -1,5 +1,5 @@
 import { loadTemplate, loadPhotos, loadImageDetail } from '../ui/index.js';
-import { DOMUtils } from '../utils/index.js';
+import { DOMUtils, URLUtils } from '../utils/index.js';
 import { gallery } from '../constants/images-data.js';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	loadTemplate();
 
-	const urlParams = new URLSearchParams(location.search);
-	const categoryParam = urlParams.get('category');
+	const categoryParam = URLUtils.getParam('category');
 
 	if (categoryParam) {
 		const navLinks = DOMUtils.findAll('.categories .nav-link');
@@ -23,6 +22,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		loadPhotos(photosContainerClass, result);
 	} else {
 		loadPhotos(photosContainerClass, gallery);
+	}
+
+	const photos = DOMUtils.findAll('a.image-col');
+
+	for (let photo of photos) {
+		photo.addEventListener('click', function (e) {
+			loadImageDetail(e.target.id);
+		});
 	}
 
 	const searchForm = DOMUtils.find('.search-form');
@@ -49,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		categoryLink.addEventListener('click', function (e) {
 			e.preventDefault();
 
+			if (categoryParam) {
+				history.replaceState({}, '', '/pages/gallery.html');
+			}
+
 			const previousActiveLink = DOMUtils.find('.categories .nav-link.active');
 
 			if (previousActiveLink) {
@@ -62,15 +73,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			const result = gallery.filter((p) => p.category.includes(categoryName));
 
 			loadPhotos(photosContainerClass, result);
-		});
-	}
 
-	const offcanvasImageDetailElement = DOMUtils.find('.offcanvas');
-	const photos = DOMUtils.findAll('a.image-col');
+			const photos = DOMUtils.findAll('a.image-col');
 
-	for (let photo of photos) {
-		photo.addEventListener('click', function (e) {
-			loadImageDetail(offcanvasImageDetailElement, e.target.id);
+			for (let photo of photos) {
+				photo.addEventListener('click', function (e) {
+					loadImageDetail(e.target.id);
+				});
+			}
 		});
 	}
 });
